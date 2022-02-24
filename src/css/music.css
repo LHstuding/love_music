@@ -1,0 +1,126 @@
+
+/*使用什么编码解析文件*/
+@charset "UTF-8";
+
+/*使用元素选择器*/
+body{
+    background: url("../img/bg.gif") no-repeat;
+    background-size: cover;/*自适应*/
+}
+/*------------------------------------------------横幅 无 no-repeat 可显示背景图片----------------------------------------------------*/
+.banner{
+    width: 900px;
+    height: 400px;
+    background: url("../img/bg1.jpg") no-repeat;/*背景图片 不重复*/
+    margin: 10px;/*设置外边距*/
+    opacity: 0.8;/*透明度*/
+    box-shadow: 10px 15px 15px 1px black;/*阴影部分:阴影右移 上下移 模糊  放大缩小*/
+    position: relative;/*让子元素使用定位相对于其父元素定位*/
+}
+/*设置横幅的li的样式*/
+.banner ul li{
+    list-style: none;/*取消列表默认样式*/
+    display: inline-block;/*行内块状元素，类似导航栏的效果*/
+     position: absolute;/*绝对定位 相对于其父元素定位*/
+}
+/*操作图片*/
+.banner ul li img{
+    cursor: pointer;/*鼠标变手势*/
+    border-radius: 50%;/*将图片菱角变圆*/
+
+}
+/*使用类选择器改变图片的位置*/
+.m1{top:100px;left:170px;}
+.m2{top:50px;left:360px;}
+.m3{top:20px;left:600px;}
+.m4{top:180px;left:400px;}
+.m5{top:270px;left:690px;}
+
+
+/*图片旋转的动画  自己查阅资料*/
+@keyframes img_rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/*动画执行的时间 次数 无休止*/
+.banner .img_rotate{
+    animation: img_rotate 2s infinite linear;/*绑定动画*/
+}
+/*-----------------------------------------------------------------music               ------------------------------------------------------------*/
+.music{
+    width: 550px;
+    height: 120px;
+    background: black;
+    position: fixed;/*相对于浏览器定位*/
+    left: 0px;
+    margin-top: 60px;
+    opacity: 0.8;/*透明度*/
+    box-shadow: 10px 15px 15px 1px black;
+}
+
+
+/*播放器优化-图片*/
+.music .m_img{
+    margin-top: 15px;
+    margin-left: 10px;
+    float: left;/*左浮动*/
+}
+
+/*音乐名*/
+.music .m_text{
+    float: left;
+    color: white;
+    font-size: 20px;/**/
+    font-weight: bold;/*加粗*/
+    margin-top: 50px;
+    margin-left:20px;
+
+}
+/*固定a标签*/
+.music .m_btn{
+    float: left;
+    position: absolute;/*绝对定位 防止名称过长将按钮挤出去*/
+    left: 300px;
+}
+/*修改a标签 中的按钮*/
+.music .m_btn a{
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: url("../img/btnbg.jpg");
+    margin-top: 50px;
+    margin-left: 20px;
+}
+/*鼠标悬浮*/
+/*改变上一首图片*/
+.music .m_btn .m_prev{background-position: -86px -270px}
+.music .m_btn .m_prev:hover{background-position: -159px -270px;}
+/*改变播放图片*/
+.music .m_btn .m_play{background-position:-231px -207px;}
+.music .m_btn .m_play:hover{background-position: -14px -207px;}
+/*改变下一首图片*/
+.music .m_btn .m_next{background-position: -376px -215px;}
+.music .m_btn .m_next:hover{background-position: -450px -215px;}
+
+/*设置最右边的关闭样式*/
+.music .m_close {
+    float: right; /*右浮动*/
+    background: url("../img/btnbg.jpg");
+    width: 52px;
+    height: 57px;
+    margin-top: 33px;
+    cursor: pointer;/*鼠标变手势*/
+    background-position: -79px -129px;
+}
+
+
+/*编写js时，更换播放按钮为暂停时编写的代码*/
+.music .m_btn .m_pause{background-position:-304px -6px;}
+.music .m_btn .m_pause:hover{background-position: -14px -270px ;}
+
+/*编写js时，更换播放按钮为暂停时编写的代码*/
+.music .m_open{background-position: -7px -129px ;}

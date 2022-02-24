@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱尚音乐</title>
+<!--    引入外部css文件-->
+    <link rel="stylesheet" href="css/music.css"/>
+
+</head>
+<body>
+<!--banner begin-->
+<div class="banner">
+    <ul>
+<!--        datasrc的值通过jQuery获取，临时属性，可以天蝎任意的值-->
+        <li  class="m1" datasrc="mp3/1.mp3" title="安河桥 ，宋冬野">
+<!--            添加5张图片-->
+            <img src="img/1.png" height="90" width="90" />
+        </li>
+
+        <li  class="m2"  datasrc="mp3/2.mp3" title="儿时，刘昊霖">
+            <!--            添加5张图片-->
+
+            <img src="img/2.png" height="90" width="90"/></li>
+        <li class="m3" datasrc="mp3/3.mp3" title="采茶纪，双笙">
+        <!--            添加5张图片-->
+
+            <img src="img/3.png" height="110" width="110"/></li>
+        <li  class="m4" datasrc="mp3/4.mp3" title="阿婆说，陈一发
+">
+            <!--            添加5张图片-->
+
+            <img src="img/4.png" height="90" width="90"/></li>
+        <li class="m5" datasrc="mp3/5.mp3" title="明天你好，牛奶咖啡">
+            <!--            添加5张图片-->
+            <img src="img/5.png" height="85" width="85"/></li>
+
+    </ul>
+<!--jQuery修改属性-->
+    <audio src="p3/1.mp3"></audio>
+</div>
+<!--music    start-->
+<div class="music">
+    <div class="m_img">
+    <img src="img/1.png" height="90" width="90"/></div>
+         <div class="m_text">儿时，刘昊霖</div>
+         <div class="m_btn">
+            <a href="#" class="m_prev" title="上一首"></a>
+            <a href="#" class="m_play" title="播放"></a>
+            <a href="#" class="m_next" title="下一首"></a>
+
+        </div>
+            <div class="m_close "></div>
+<!--    媒介元素-->
+<audio src="mp3/1.mp3" class="m_mp3"></audio>
+
+</div>
+<!--music    end-->
+<!--引入jQuery核心文件-->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!--引入外部js文件-->
+<script type="text/javascript"src="music.js"></script>
+</body>
+</html>
